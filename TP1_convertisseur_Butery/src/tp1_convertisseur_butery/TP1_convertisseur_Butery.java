@@ -18,16 +18,45 @@ public class TP1_convertisseur_Butery {
      * @param args the command line arguments
      */
 public static void main(String[] args) {
-    System.out.println("Veuillez saisir un réel :");
+    System.out.println("Bonjour, saisissez une valeur :");
     Scanner scanner = new Scanner(System.in);
     double VarA;
     VarA = scanner.nextDouble();
-    System.out.println("La température en Kelvin est :"+(VarA+273.15));
+    System.out.println("Saisissez la conversion que vous souhaiter effectuer :");
+    System.out.println("1) de Celcius vers Kelvin");
+    System.out.println("2) de Kelvin vers Celcius");
+    System.out.println("3) de Farenheit vers Celcius");
+    System.out.println("4) de Celcius vers Farenheit");
+    System.out.println("5) de Kelvin vers Farenheit");
+    System.out.println("6) de Farenheit vers Kelvin");
+    int Varb;
+    Varb=scanner.nextInt();
+    if(Varb==1){
+        CelciusVersKelvin(VarA);
     }
+    else if(Varb==2){
+        KelvinVersCelcius(VarA);
+    }
+    
+    else if(Varb==3){
+        FarenheitVersCelcius(VarA);
+    }
+    else if(Varb==4){
+        CelciusVersFarenheit(VarA);
+    }
+    else if(Varb==5){
+        KelvinVersFarenheit(VarA);
+    }
+    else if(Varb==6){
+        FarenheitVersKelvin(VarA);
+    }
+
+}
     
 
 public static double CelciusVersKelvin (double tCelcius) {
  double tKelvin=tCelcius+273.15;
+ System.out.println("degré Celcius est égal à");
     return tKelvin;
 }
 public static double KelvinVersCelcius (double tKelvin) {
