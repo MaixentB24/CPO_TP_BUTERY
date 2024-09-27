@@ -56,29 +56,34 @@ public static void main(String[] args) {
 
 public static double CelciusVersKelvin (double tCelcius) {
  double tKelvin=tCelcius+273.15;
- System.out.println("degré Celcius est égal à");
+ System.out.println(tCelcius+"degré Celcius est égal à"+tKelvin+"degrés Kelvin");
     return tKelvin;
 }
 public static double KelvinVersCelcius (double tKelvin) {
  double tCelcius=tKelvin-273.15;
+  System.out.println(tKelvin+"degré kelvin est égal à"+tCelcius+"degrés Celcius");
     return tCelcius;
 }
 public static double FarenheitVersCelcius (double tFarenheit) {
  double tCelcius=(tFarenheit-32)*5/9;
+  System.out.println(tFarenheit+"degré Farenheit est égal à"+tCelcius+"degrés Celcius");
     return tCelcius;
 }
 public static double CelciusVersFarenheit (double tCelcius) {
  double tFarenheit=tCelcius*9/5+32;
+  System.out.println(tCelcius+"degré Celcius est égal à"+tFarenheit+"degrés Farenheit");
     return tFarenheit;
 }
 public static double KelvinVersFarenheit (double tKelvin) {
 double tFarenheit = KelvinVersCelcius(tKelvin);
 tFarenheit = CelciusVersFarenheit(tFarenheit);
+ System.out.println(tKelvin+"degré Kelvin est égal à"+tFarenheit+"degrés Farenheit");
     return tFarenheit;
 }
 public static double FarenheitVersKelvin (double tFarenheit) {
  double tKelvin=FarenheitVersCelcius(tFarenheit);
 tKelvin=CelciusVersFarenheit(tKelvin);
+ System.out.println(tFarenheit+"degré Farenheit est égal à"+tKelvin+"degrés Kelvin");
     return tKelvin;
 }
 
