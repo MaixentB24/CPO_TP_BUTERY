@@ -12,39 +12,45 @@ import java.util.Scanner;
  * @author Maixent
  */
 public class TP1_guessMyNumber_BUTERY {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-    /**Random generateurAleat = new Random();
-    *for (int i=0;i<=5;i++){
-    *    int n = generateurAleat.nextInt(100);
-    *System.out.print("\n"+n);
-    * 
-    *}
-    */
-    Random generateurAleat = new Random();
-    int n = generateurAleat.nextInt(100);
-    int m=0;
-    int w=0;
-    System.out.println("Veuillez choisir une difficulté :");
-    while (n!=m){
-        
-    System.out.println("Veuillez saisir un nombre : ");
-    Scanner scanner = new Scanner(System.in);
-    m = scanner.nextInt();
-    w+=1;
-    if (n==m){
-        System.out.println("Gagné");
-    System.out.println("vous avez fait "+w+" Tentative");
-    }
-    else if (n<m){
-        System.out.println("trop grand !");
-    }
-    else if (n>m){
-        System.out.println("trop petit");
-    }
-    }
+    public static void main(String[] args){
+        Random generateurAleat = new Random();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veuillez choisir une difficulté :");
+        System.out.println("1. Facile (entre 1 et 50)");
+        System.out.println("2. Moyen (entre 1 et 100)");
+        System.out.println("3. Difficile (entre 1 et 200)");
+        int choixDifficulte = scanner.nextInt();
+        int limiteMax = 100;
+        switch (choixDifficulte) {
+            case 1:
+                limiteMax = 50;
+                break;
+            case 2:
+                limiteMax = 100;
+                break;
+            case 3:
+                limiteMax = 200;
+                break;
+            default:
+                System.out.println("Choix invalide, difficulté moyenne choisie par défaut.");
+                limiteMax = 100;
+                break;
+        }
+        int nombreAleatoire = generateurAleat.nextInt(limiteMax) + 1;
+        int tentative = 0;
+        int nombreEntre;
+        do {
+            System.out.print("Veuillez saisir un nombre entre 1 et " + limiteMax + " : ");
+            nombreEntre = scanner.nextInt();
+            tentative++;
+            if (nombreEntre > nombreAleatoire) {
+                System.out.println("Trop grand !");
+            } else if (nombreEntre < nombreAleatoire) {
+                System.out.println("Trop petit !");
+            }
+        } while (nombreEntre != nombreAleatoire);
+        System.out.println("Gagné !");
+        System.out.println("Vous avez trouvé en " + tentative + " tentative(s).");
+        scanner.close();
     }
 }
