@@ -30,6 +30,12 @@ public class TP2_Bieres_BUTERY {
     
         BouteilleBiere uneBiere5 = new BouteilleBiere("Guinness",4.2,"James's Gate") ;
     uneBiere5.lireEtiquette();
+    uneBiere5.decapsuler();
+    uneBiere5.decapsuler();
+    System.out.println(uneBiere) ;
+    uneBiere2.decapsuler();
+    System.out.println(uneBiere2);
+    System.out.println(uneBiere5);
     }
     
     
