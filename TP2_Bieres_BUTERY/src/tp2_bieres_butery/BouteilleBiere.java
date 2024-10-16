@@ -18,7 +18,7 @@ System.out.println("Bouteille de " + nom +" (" + degreAlcool +
  " degres) \nBrasserie : " + brasserie ) ;
 
 }
-public BouteilleBiere(String unNom, float unDegre, String
+public BouteilleBiere(String unNom, double unDegre, String
 uneBrasserie) {
  nom = unNom;
  degreAlcool = unDegre;
