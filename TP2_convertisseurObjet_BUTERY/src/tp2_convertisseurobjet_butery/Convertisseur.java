@@ -1,10 +1,8 @@
-
-import java.util.Scanner;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package tp2_convertisseurobjet_butery;
 
 /**
  *
@@ -25,11 +23,11 @@ public class Convertisseur {
     }
 
     // Méthode pour convertir Celsius vers Kelvin
-    public double celsiusVersKelvin(double tCelsius) {
+    public double CelciusVersKelvin (double tCelcius) {
         nbConversions++;
-        return tCelsius + 273.15;
+    double tKelvin=tCelcius+273.15;
+    return tKelvin;
     }
-
     // Méthode pour convertir Kelvin vers Celsius
     public double kelvinVersCelsius(double tKelvin) {
         nbConversions++;
@@ -73,6 +71,3 @@ public class Convertisseur {
         return "Nombre de conversions : " + nbConversions;
     }
 }
-
- 
-
