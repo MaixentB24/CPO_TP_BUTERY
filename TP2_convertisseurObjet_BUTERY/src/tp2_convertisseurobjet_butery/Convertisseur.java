@@ -23,7 +23,7 @@ public class Convertisseur {
     }
 
     // Méthode pour convertir Celsius vers Kelvin
-    public double CelciusVersKelvin (double tCelcius) {
+    public double celsiusVersKelvin (double tCelcius) {
         nbConversions++;
     double tKelvin=tCelcius+273.15;
     return tKelvin;
@@ -70,4 +70,4 @@ public class Convertisseur {
     public String toString() {
         return "Nombre de conversions : " + nbConversions;
     }
-}
+    }
