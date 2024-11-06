@@ -18,14 +18,17 @@ public class TP2_relation_1_BUTERY {
         String Modele ="";
         String Marque="";
         int PuissanceCV;
-            public Voiture(String Modele, String Marque, int PuissanceCV) {
+            public Voiture(String Modele, String Marque, int PuissanceCV,Personne Proprietaire) {
                 this.Modele=Modele;
                 this.Marque=Marque;
                 this.PuissanceCV=PuissanceCV;
+                this.Proprietaire=NULL;
             }
         @Override
         public String toString () {
         return "Voiture { Modele: " + Modele + ", Marque: " + Marque + ", Puissance: " + PuissanceCV + " CV }";
+        Personne Proprietaire ;
+
 }
     }
     class Personne{
